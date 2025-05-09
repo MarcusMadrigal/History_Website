@@ -46,13 +46,16 @@ var LIST = [
 
 var dance = function(x, dunno) {
     var cat = document.getElementById(x);
-    for(var i = 0; i < dunno; i++){
+    for(var i = 0; i < dunno.length; i++){
         var copycat = cat.cloneNode(true);
-        document.body.append(dunno[i].title);
+        copycat.innerHTML = dunno[i].chrs;
+        copycat.classList.add(dunno[i].class);
+        copycat.classList.add("cat");
+        document.body.append(copycat);
     }
 }
 
-dance("copycat", 7);
+dance("copycat", LIST);
 
 var inHtml = function(x){
     document.querySelector("div#innerHTMLFUN").innerHTML = x;
