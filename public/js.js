@@ -5,31 +5,50 @@
 // Draw Variable Thingy
 var LIST = [
     
-    [
-        "Hello.",
-        "I am computer.",
-        "*Checking search history...",
-        "...",
-        "...",
-        "...!",
-        "WTF",
-        "An airstrike will arrive at your house in 3 minutes.",
-        "Run."
+    {
+        title: "opening frame",
+        class: "f1",
+        chrs:[
+            "Hello.",
+            "I am computer.",
+            "*Checking search history...",
+            "...",
+            "...",
+            "...!",
+            "WTF",
+            "An airstrike will arrive at your house in 3 minutes.",
+            "Run."
+        ]
 
-    ],
-    [
-        "AAAAAAAAAAAAAAAAAAAHHHHHHHHH",
-    ],
-    [
-        "HAHAHAHAHAHAHAHAHAHAHAHAHAHA",
-    ]
+    },
+    {
+        title: "setup",
+        class: "f2",
+        chrs:[
+            "AAAAAAAAAAAAAAAAAAAHHHHHHHHH",
+        ]
+    },
+    {
+        title: "zoom",
+        class: "f3",
+        chrs:[
+            "HAHAHAHAHAHAHAHAHAHAHAHAHAHA",
+        ]
+    },
+    {
+        title: "suspense",
+        class: "f4",
+        chrs:[
+            "*Loud and cool explosion sound"
+        ]
+    }
 ];
 
 var dance = function(x, dunno) {
     var cat = document.getElementById(x);
     for(var i = 0; i < dunno; i++){
         var copycat = cat.cloneNode(true);
-        document.body.append(copycat);
+        document.body.append(dunno[i].title);
     }
 }
 
