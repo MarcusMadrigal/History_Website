@@ -25,14 +25,32 @@ var LIST = [
     ]
 ];
 
-var target = document.getElementById("hitMe");
-var stuffToShow = '';
+var dance = function(x, dunno) {
+    var cat = document.getElementById(x);
+    for(var i = 0; i < dunno; i++){
+        var copycat = cat.cloneNode(true);
+        document.body.append(copycat);
+    }
+}
+
+dance("copycat", 7);
+
+var inHtml = function(x){
+    document.querySelector("div#innerHTMLFUN").innerHTML = x;
+}
+
+inHtml("whatever I want in here");
+
 var draw = function(x) {
+    var target = document.getElementById("hitMe");
+    var stuffToShow = '';
+    alert(x.length);
     for(
         var count = 0;
         count < x.length;
         count++
     ) {
+        alert("frame");
         var nextList = x[count];
         for(var i = 0; i < nextList.length; i++) {
             alert( nextList[i]);
