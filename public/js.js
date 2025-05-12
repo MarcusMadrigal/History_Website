@@ -10,13 +10,13 @@ var LIST = [
         class: "f1",
         chrs:[
             "Hello.",
-            "I am computer.",
-            "*Checking search history...",
+            "I_am_computer.",
+            "*Checking_search_history...",
             "...",
             "...",
             "...!",
             "WTF",
-            "An airstrike will arrive at your house in 3 minutes.",
+            "An_airstrike_will_arrive_at_your_house_in_3_minutes.",
             "Run."
         ]
 
@@ -39,7 +39,7 @@ var LIST = [
         title: "suspense",
         class: "f4",
         chrs:[
-            "*Loud and cool explosion sound"
+            "*Loud_and_cool_explosion_sound"
         ]
     }
 ];
@@ -48,9 +48,22 @@ var dance = function(x, dunno) {
     var cat = document.getElementById(x);
     for(var i = 0; i < dunno.length; i++){
         var copycat = cat.cloneNode(true);
-        copycat.innerHTML = dunno[i].chrs;
+        copycat.innerHTML = dunno[i].title;
         copycat.classList.add(dunno[i].class);
         copycat.classList.add("cat");
+
+        for(
+            var c = 0;
+            c < dunno[i].chrs.length;
+            c++
+        ){
+            var chrHTML = document.createElement("div");
+            chrHTML.innerHTML = dunno[i].chrs[c];
+            chrHTML.classList.add(dunno[i].chrs[c]);
+            chrHTML.classList.add("chr");
+            copycat.append(chrHTML);
+        };
+
         document.body.append(copycat);
     }
 }
