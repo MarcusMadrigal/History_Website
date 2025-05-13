@@ -11,15 +11,14 @@
     bottom: 0;
     display: block;
     padding: 1rem;
-    border: 1px solid pink;
 }
-.chr.computerF1{
-    background-color: purple;
-}
-
-.computerF1{
+.computerF1 .chr{
     background: url(/public/img/computerF1.png) no-repeat;
-
+    background-size: 100%;
+    height: 500px;
+    width: 300px;
+    top: 24%;
+    left: 7%;
 }
 
 .humanF2{

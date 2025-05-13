@@ -9,13 +9,6 @@ var LIST = [
         title: "Computer1",
         class: "computerF1",
         chrs:[
-            "Hello.",
-            "I_am_computer.",
-            "*Checking_search_history...",
-            "...",
-            "...",
-            "...!",
-            "WTF",
             "An_airstrike_will_arrive_at_your_house_in_3_minutes.",
             "Run."
         ]
@@ -57,11 +50,16 @@ var dance = function(x, dunno) {
             c < dunno[i].chrs.length;
             c++
         ){
-            var chrHTML = document.querySelector("#copycat .chr").cloneNode(true); //createElement("div");
-            //chrHTML.innerHTML = dunno[i].chrs[c];
+            var chrHTML = document.createElement("div");
+            chrHTML.innerHTML = dunno[i].chrs[c];
             chrHTML.classList.add(dunno[i].chrs[c]);
             chrHTML.classList.add("chr");
             copycat.append(chrHTML);
+
+            //var chrHTML = document.querySelector("#copycat .chr").cloneNode(true);
+            //chrHTML.classList.add(dunno[i].chrs[c]);
+            //chrHTML.classList.add("chr");
+            //copycat.append(chrHTML);
         };
 
         document.body.append(copycat);
