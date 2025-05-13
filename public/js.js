@@ -6,8 +6,8 @@
 var LIST = [
     
     {
-        title: "opening frame",
-        class: "f1",
+        title: "Computer1",
+        class: "computerF1",
         chrs:[
             "Hello.",
             "I_am_computer.",
@@ -22,22 +22,22 @@ var LIST = [
 
     },
     {
-        title: "setup",
-        class: "f2",
+        title: "Human",
+        class: "humanF2",
         chrs:[
             "AAAAAAAAAAAAAAAAAAAHHHHHHHHH",
         ]
     },
     {
-        title: "zoom",
-        class: "f3",
+        title: "Computer2",
+        class: "computerF3",
         chrs:[
             "HAHAHAHAHAHAHAHAHAHAHAHAHAHA",
         ]
     },
     {
-        title: "suspense",
-        class: "f4",
+        title: "Explosion",
+        class: "explosionF4",
         chrs:[
             "*Loud_and_cool_explosion_sound"
         ]
@@ -57,8 +57,8 @@ var dance = function(x, dunno) {
             c < dunno[i].chrs.length;
             c++
         ){
-            var chrHTML = document.createElement("div");
-            chrHTML.innerHTML = dunno[i].chrs[c];
+            var chrHTML = document.querySelector("#copycat .chr").cloneNode(true); //createElement("div");
+            //chrHTML.innerHTML = dunno[i].chrs[c];
             chrHTML.classList.add(dunno[i].chrs[c]);
             chrHTML.classList.add("chr");
             copycat.append(chrHTML);
@@ -70,28 +70,28 @@ var dance = function(x, dunno) {
 
 dance("copycat", LIST);
 
-var inHtml = function(x){
-    document.querySelector("div#innerHTMLFUN").innerHTML = x;
-}
+//var inHtml = function(x){
+//    document.querySelector("div#innerHTMLFUN").innerHTML = x;
+//}
 
-inHtml("whatever I want in here");
+//inHtml("whatever I want in here");
 
-var draw = function(x) {
-    var target = document.getElementById("hitMe");
-    var stuffToShow = '';
-    alert(x.length);
-    for(
-        var count = 0;
-        count < x.length;
-        count++
-    ) {
-        alert("frame");
-        var nextList = x[count];
-        for(var i = 0; i < nextList.length; i++) {
-            alert( nextList[i]);
-            target.innerHTML = stuffToShow += nextList[i];
-        }
-    }
-}
-
-draw(LIST);
+//var draw = function(x) {
+//    var target = document.getElementById("hitMe");
+//    var stuffToShow = '';
+//    alert(x.length);
+//    for(
+//        var count = 0;
+//        count < x.length;
+//        count++
+//    ) {
+//        alert("frame");
+//        var nextList = x[count];
+//        for(var i = 0; i < nextList.length; i++) {
+//            alert( nextList[i]);
+//            target.innerHTML = stuffToShow += nextList[i];
+//        }
+//    }
+//}
+//
+//draw(LIST);

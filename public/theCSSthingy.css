@@ -1,15 +1,35 @@
-.f1{
-    
+.frame{
+    width: 500px;
+    height: 700px;
+    background-color: aliceblue;
+    border: 10px ridge black;
+    display: inline-block;
 }
 
-.f2{
+.chr{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    padding: 1rem;
+    border: 1px solid pink;
+}
+.chr.computerF1{
+    background-color: purple;
+}
+
+.computerF1{
+    background: url(/public/img/computerF1.png) no-repeat;
 
 }
 
-.f3{
+.humanF2{
 
 }
 
-.f4{
+.computerF3{
+
+}
+
+.explosionF4{
 
 }
