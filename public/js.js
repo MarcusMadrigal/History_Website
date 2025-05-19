@@ -9,7 +9,6 @@ var LIST = [
         title: "Computer1",
         class: "computerF1",
         chrs:[
-            "An_airstrike_will_arrive_at_your_house_in_3_minutes.",
             "Run."
         ]
 
@@ -25,7 +24,7 @@ var LIST = [
         title: "Computer2",
         class: "computerF3",
         chrs:[
-            "HAHAHAHAHAHAHAHAHAHAHAHAHAHA",
+            "HAHAHAHAHAHAHAHA",
         ]
     },
     {
@@ -43,7 +42,6 @@ var dance = function(x, dunno) {
         var copycat = cat.cloneNode(true);
         copycat.innerHTML = dunno[i].title;
         copycat.classList.add(dunno[i].class);
-        copycat.classList.add("cat");
 
         for(
             var c = 0;
@@ -60,7 +58,7 @@ var dance = function(x, dunno) {
             //chrHTML.classList.add(dunno[i].chrs[c]);
             //chrHTML.classList.add("chr");
             //copycat.append(chrHTML);
-        };
+        }
 
         document.body.append(copycat);
     }

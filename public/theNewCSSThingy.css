@@ -1,0 +1,16 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item{
+    background-color: aliceblue;
+    border: 10px ridge black;
+    height: 500px;
+    width: 450px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
