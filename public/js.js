@@ -27,7 +27,10 @@ var LIST = [
         class: "computerF3",
         otherClass: "T",
         chrs:[
-            "HAHAHAHAHAHAHAHA",
+            "HAHAHAHAHA",
+            "HAHAHAHA",
+            "HAHAHA",
+            "HAHA"
         ]
     },
     {
@@ -49,14 +52,16 @@ var dance = function(x, dunno) {
         i++
     ){
         var copycat = cat.cloneNode(true);
-        copycat.innerHTML = dunno[i].title;
-        copycat.classList.add(dunno[i].class);
+        //copycat.innerHTML = dunno[i].title;
+        //copycat.classList.add(dunno[i].class);
         
         for(
             var f = 0;
             f < dunno[i].otherClass.length;
             f++
         ){
+            copycat.innerHTML = dunno[i].title;
+            copycat.classList.add(dunno[i].class);
             var framesHTML = document.createElement("div");
             framesHTML.innerHTML = dunno[i].otherClass[f];
             framesHTML.classList.add("frame");

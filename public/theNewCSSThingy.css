@@ -18,13 +18,13 @@
 }
 
 .T{
-    top: 560px;
-    left: 20px;
+    top: 20px;
+    left: 1000px;
 }
 
 .E{
-    top: 560px;
-    left: 510px;
+    top: 20px;
+    left: 1490px;
 }
 
 .chr{
@@ -39,4 +39,56 @@
     left: 80px;
     top: 90px;
     position: absolute;
+    line-height: 190px;
+    text-indent: 45px;
+    font-size: 20px;
+}
+
+.AAAAAAAAAAAAAAAAAAAHHHHHHHHH{
+    background: url(/public/img/scaredHuman.jpg) no-repeat;
+    border: 5px ridge rgb(223, 221, 221);
+    height: 393.75px;
+    width: 350px;
+    background-size: 150%;
+    background-position: 50%;
+    left: 560px;
+    top: 60px;
+    position: absolute;
+    line-height: 860px;
+    text-indent: -30px;
+    font-size: 20px;
+}
+
+.HAHAHAHAHA{
+    background: url(/public/img/computerF1.png) no-repeat;
+    height: 393.75px;
+    width: 350px;
+    background-size: 100%;
+    left: 1060px;
+    top: 90px;
+    position: absolute;
+    line-height: 135px;
+    text-indent: 50px;
+    font-size: 20px;
+}
+
+.HAHAHAHA{
+    left: 1128px;
+    top: 165px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.HAHAHA{
+    left: 1146px;
+    top: 185px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.HAHA{
+    left: 1164px;
+    top: 205px;
+    position: absolute;
+    font-size: 20px;
 }
