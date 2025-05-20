@@ -8,14 +8,16 @@ var LIST = [
     {
         title: "Computer1",
         class: "computerF1",
+        otherClass: "C",
         chrs:[
-            "Run."
+            "Run_for_your_life",
         ]
 
     },
     {
         title: "Human",
         class: "humanF2",
+        otherClass: "H",
         chrs:[
             "AAAAAAAAAAAAAAAAAAAHHHHHHHHH",
         ]
@@ -23,6 +25,7 @@ var LIST = [
     {
         title: "Computer2",
         class: "computerF3",
+        otherClass: "T",
         chrs:[
             "HAHAHAHAHAHAHAHA",
         ]
@@ -30,6 +33,7 @@ var LIST = [
     {
         title: "Explosion",
         class: "explosionF4",
+        otherClass: "E",
         chrs:[
             "*Loud_and_cool_explosion_sound"
         ]
@@ -38,6 +42,7 @@ var LIST = [
 
 var dance = function(x, dunno) {
     var cat = document.getElementById(x);
+    
     for(
         var i = 0;
         i < dunno.length;
@@ -46,6 +51,18 @@ var dance = function(x, dunno) {
         var copycat = cat.cloneNode(true);
         copycat.innerHTML = dunno[i].title;
         copycat.classList.add(dunno[i].class);
+        
+        for(
+            var f = 0;
+            f < dunno[i].otherClass.length;
+            f++
+        ){
+            var framesHTML = document.createElement("div");
+            framesHTML.innerHTML = dunno[i].otherClass[f];
+            framesHTML.classList.add("frame");
+            framesHTML.classList.add(dunno[i].otherClass[f]);
+            copycat.append(framesHTML);
+        }
 
         for(
             var c = 0;
@@ -54,8 +71,8 @@ var dance = function(x, dunno) {
         ){
             var chrHTML = document.createElement("div");
             chrHTML.innerHTML = dunno[i].chrs[c];
-            chrHTML.classList.add(dunno[i].chrs[c]);
             chrHTML.classList.add("chr");
+            chrHTML.classList.add(dunno[i].chrs[c]);
             copycat.append(chrHTML);
 
             //var chrHTML = document.querySelector("#copycat .chr").cloneNode(true);
@@ -64,20 +81,92 @@ var dance = function(x, dunno) {
             //copycat.append(chrHTML);
         }
 
-        for(
-            var f = 0;
-            f < dunno[f].class.length;
-            f++
-        ){
-            var framesHTML = document.createElement("div");
-            framesHTML.innerHTML = dunno[i].class[f];
-        }
-
         document.body.append(copycat);
     }
 }
 
 dance("copycat", LIST);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //var inHtml = function(x){
 //    document.querySelector("div#innerHTMLFUN").innerHTML = x;

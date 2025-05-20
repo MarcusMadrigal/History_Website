@@ -1,36 +1,42 @@
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
-
 .frame{
     background-color: aliceblue;
     border: 10px ridge black;
     height: 500px;
     width: 450px;
     position: absolute;
+    z-index: -5;
+}
+
+.C{
     top: 20px;
-    left: 100px;
+    left: 20px;
 }
 
-.coolComputer{
-    grid-column-start: 1;
-    grid-row-start: 1;
+.H{
+    top: 20px;
+    left: 510px;
 }
 
-.scaredHuman{
-    grid-column-start: 2;
-    grid-row-start: 1;
+.T{
+    top: 560px;
+    left: 20px;
 }
 
-.tyrannicalComputer{
-    grid-column-start: 1;
-    grid-row-start: 2;
+.E{
+    top: 560px;
+    left: 510px;
 }
 
-.explosion{
-    grid-column-start: 2;
-    grid-row-start: 2;
+.chr{
+    z-index: 5;
+}
+
+.Run_for_your_life{
+    background: url(/public/img/computerF1.png) no-repeat;
+    height: 393.75px;
+    width: 350px;
+    background-size: 100%;
+    left: 80px;
+    top: 90px;
+    position: absolute;
 }
