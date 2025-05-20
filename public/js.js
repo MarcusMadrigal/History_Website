@@ -38,7 +38,11 @@ var LIST = [
 
 var dance = function(x, dunno) {
     var cat = document.getElementById(x);
-    for(var i = 0; i < dunno.length; i++){
+    for(
+        var i = 0;
+        i < dunno.length;
+        i++
+    ){
         var copycat = cat.cloneNode(true);
         copycat.innerHTML = dunno[i].title;
         copycat.classList.add(dunno[i].class);
@@ -58,6 +62,15 @@ var dance = function(x, dunno) {
             //chrHTML.classList.add(dunno[i].chrs[c]);
             //chrHTML.classList.add("chr");
             //copycat.append(chrHTML);
+        }
+
+        for(
+            var f = 0;
+            f < dunno[f].class.length;
+            f++
+        ){
+            var framesHTML = document.createElement("div");
+            framesHTML.innerHTML = dunno[i].class[f];
         }
 
         document.body.append(copycat);

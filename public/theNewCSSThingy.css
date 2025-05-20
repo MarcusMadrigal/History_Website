@@ -5,7 +5,7 @@
     gap: 20px;
 }
 
-.item{
+.frame{
     background-color: aliceblue;
     border: 10px ridge black;
     height: 500px;
@@ -13,4 +13,24 @@
     position: absolute;
     top: 20px;
     left: 100px;
+}
+
+.coolComputer{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.scaredHuman{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.tyrannicalComputer{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.explosion{
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
