@@ -38,7 +38,7 @@ var LIST = [
         class: "explosionF4",
         otherClass: "E",
         chrs:[
-            "*Loud_and_cool_explosion_sound"
+            "NOOOOOOOOOOOOOOO"
         ]
     }
 ];
