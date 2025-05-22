@@ -9,9 +9,8 @@ var LIST = [
         character: [
             "Computer1"
         ],
-        class: "computerF1",
-        otherClass: "C",
-        chrs:[
+        frame: "C",
+        words:[
             "Run_for_your_life",
         ]
 
@@ -20,19 +19,18 @@ var LIST = [
         character: [
             "Human"
         ],
-        class: "humanF2",
-        otherClass: "H",
-        chrs:[
+        frame: "H",
+        words:[
             "AAAAAAAAAAAAAAAAAAAHHHHHHHHH",
         ]
     },
     {
         character: [
-            "Computer2"
+            "Computer2",
+            "fire"
         ],
-        class: "computerF3",
-        otherClass: "T",
-        chrs:[
+        frame: "T",
+        words:[
             "HAHAHAHAHA",
             "HAHAHAHA",
             "HAHAHA",
@@ -43,12 +41,20 @@ var LIST = [
         character: [
             "Explosion"
         ],
-        class: "explosionF4",
-        otherClass: "E",
-        chrs:[
+        frame: "E",
+        words:[
             "NOOOOOOOOOOOOOOO"
         ]
-    }
+    },
+    /*{
+        character: [
+            "Computer3"
+        ],
+        frame: "R",
+        words:[
+            "I'm_not_done_yet"
+        ]
+    }*/
 ];
 
 var dance = function(x, dunno) {
@@ -63,37 +69,37 @@ var dance = function(x, dunno) {
 
         for(
             var f = 0;
-            f < dunno[i].otherClass.length;
+            f < dunno[i].frame.length;
             f++
         ){
             var framesHTML = document.createElement("div");
-            framesHTML.innerHTML = dunno[i].otherClass[f];
+            framesHTML.innerHTML = dunno[i].frame[f];
             framesHTML.classList.add("frame");
-            framesHTML.classList.add(dunno[i].otherClass[f]);
+            framesHTML.classList.add(dunno[i].frame[f]);
             copycat.append(framesHTML);
         }
 
         for(
-            var c = 0;
-            c < dunno[i].chrs.length;
-            c++
+            var w = 0;
+            w < dunno[i].words.length;
+            w++
         ){
-            var chrHTML = document.createElement("div");
-            chrHTML.innerHTML = dunno[i].chrs[c];
-            chrHTML.classList.add("chr");
-            chrHTML.classList.add(dunno[i].chrs[c]);
-            copycat.append(chrHTML);
+            var wordsHTML = document.createElement("div");
+            wordsHTML.innerHTML = dunno[i].words[w];
+            wordsHTML.classList.add("words");
+            wordsHTML.classList.add(dunno[i].words[w]);
+            copycat.append(wordsHTML);
         }
 
         for(
-            var C = 0;
-            C < dunno[i].character.length;
-            C++
+            var c = 0;
+            c < dunno[i].character.length;
+            c++
         ){
             var characterHTML = document.createElement("div");
-            characterHTML.innerHTML = dunno[i].character[C];
+            characterHTML.innerHTML = dunno[i].character[c];
             characterHTML.classList.add("character");
-            characterHTML.classList.add(dunno[i].character[C]);
+            characterHTML.classList.add(dunno[i].character[c]);
             copycat.append(characterHTML);
         }
 
@@ -102,110 +108,3 @@ var dance = function(x, dunno) {
 }
 
 dance("copycat", LIST);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//var inHtml = function(x){
-//    document.querySelector("div#innerHTMLFUN").innerHTML = x;
-//}
-
-//inHtml("whatever I want in here");
-
-//var draw = function(x) {
-//    var target = document.getElementById("hitMe");
-//    var stuffToShow = '';
-//    alert(x.length);
-//    for(
-//        var count = 0;
-//        count < x.length;
-//        count++
-//    ) {
-//        alert("frame");
-//        var nextList = x[count];
-//        for(var i = 0; i < nextList.length; i++) {
-//            alert( nextList[i]);
-//            target.innerHTML = stuffToShow += nextList[i];
-//        }
-//    }
-//}
-//
-//draw(LIST);

@@ -40,7 +40,7 @@ html{
     color: rgb(182, 182, 182);
 }
 
-.chr{
+.words{
     z-index: 5;
 }
 
@@ -185,4 +185,5 @@ html{
     left: 400px;
     top: 678px;
     position: absolute;
+    color: lightblue;
 }
