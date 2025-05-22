@@ -6,7 +6,9 @@
 var LIST = [
     
     {
-        title: "Computer1",
+        character: [
+            "Computer1"
+        ],
         class: "computerF1",
         otherClass: "C",
         chrs:[
@@ -15,7 +17,9 @@ var LIST = [
 
     },
     {
-        title: "Human",
+        character: [
+            "Human"
+        ],
         class: "humanF2",
         otherClass: "H",
         chrs:[
@@ -23,7 +27,9 @@ var LIST = [
         ]
     },
     {
-        title: "Computer2",
+        character: [
+            "Computer2"
+        ],
         class: "computerF3",
         otherClass: "T",
         chrs:[
@@ -34,7 +40,9 @@ var LIST = [
         ]
     },
     {
-        title: "Explosion",
+        character: [
+            "Explosion"
+        ],
         class: "explosionF4",
         otherClass: "E",
         chrs:[
@@ -52,16 +60,12 @@ var dance = function(x, dunno) {
         i++
     ){
         var copycat = cat.cloneNode(true);
-        //copycat.innerHTML = dunno[i].title;
-        //copycat.classList.add(dunno[i].class);
-        
+
         for(
             var f = 0;
             f < dunno[i].otherClass.length;
             f++
         ){
-            copycat.innerHTML = dunno[i].title;
-            copycat.classList.add(dunno[i].class);
             var framesHTML = document.createElement("div");
             framesHTML.innerHTML = dunno[i].otherClass[f];
             framesHTML.classList.add("frame");
@@ -79,11 +83,18 @@ var dance = function(x, dunno) {
             chrHTML.classList.add("chr");
             chrHTML.classList.add(dunno[i].chrs[c]);
             copycat.append(chrHTML);
+        }
 
-            //var chrHTML = document.querySelector("#copycat .chr").cloneNode(true);
-            //chrHTML.classList.add(dunno[i].chrs[c]);
-            //chrHTML.classList.add("chr");
-            //copycat.append(chrHTML);
+        for(
+            var C = 0;
+            C < dunno[i].character.length;
+            C++
+        ){
+            var characterHTML = document.createElement("div");
+            characterHTML.innerHTML = dunno[i].character[C];
+            characterHTML.classList.add("character");
+            characterHTML.classList.add(dunno[i].character[C]);
+            copycat.append(characterHTML);
         }
 
         document.body.append(copycat);
