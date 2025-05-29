@@ -1,0 +1,93 @@
+html{
+    background-color: white;
+}
+
+.title{
+    left: 38%;
+    top: 6%;
+    position: absolute;
+}
+
+.authorIntroduction{
+    left: 46.5%;
+    top: 11%;
+    position: absolute;
+}
+
+.MarcusㅤMadrigal{
+    left: 36%;
+    top: 17%;
+    position: absolute;
+}
+
+.EmersonㅤBrown{
+    left: 46%;
+    top: 17%;
+    position: absolute;
+}
+
+.CodyㅤSics{
+    left: 58.75%;
+    top: 17%;
+    position: absolute;
+}
+
+.comma1{
+    left: 44.75%;
+    top: 17.6%;
+    position: absolute;
+}
+
+.comma2{
+    left: 54.55%;
+    top: 17%;
+    position: absolute;
+}
+
+.button{
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    padding: 0px;
+}
+
+.HistoricalㅤContext{
+    top: 200px;
+    left: 26.5%;
+    color: white;
+    font-size: 18px;
+    text-indent: 14%;
+    line-height: 160%;
+}
+
+.Thesis{
+    top: 200px;
+    left: 36.5%;
+    color: white;
+    font-size: 24px;
+    text-indent: 17%;
+    line-height: 240%;
+}
+
+.OctoberㅤRevolution{
+    top: 200px;
+    left: 46.5%;
+    color: white;
+    font-size: 18px;
+}
+
+.FebruaryㅤRevolution{
+    top: 200px;
+    left: 56.5%;
+    color: white;
+    font-size: 18px;
+}
+
+.RussianㅤCivilㅤWar{
+    top: 200px;
+    left: 66.5%;
+    color: white;
+    font-size: 18px;
+}
